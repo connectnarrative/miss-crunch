@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-14",
-  "status": "source-recovered-locally-not-yet-imported-to-github",
+  "version": "2026-10-14-35k",
+  "status": "updated-full-source-ZIP-ready; transfer-to-GitHub-pending",
   "target": "existing main Shop catalogue; keep Saturday offerings",
   "items": [
     {
@@ -16,7 +16,7 @@
     {
       "existing_saturday_product": "empanadas-arabes",
       "shop_title": "Empanadas Árabes",
-      "price_cop": 70000,
+      "price_cop": 35000,
       "pack_size": "1 package; physical count unverified",
       "sku": "empanadas-arabes (same identifier on Shop and Saturday)",
       "photos": [
@@ -47,7 +47,10 @@
     "Real product photography; no AI imagery"
   ],
   "assets": "See miss_crunch_shop_catalogue_update_assets.zip in original ChatGPT conversation (assets not yet in this repository)",
-  "source_archive": "miss-crunch-github-ready-2026-10-14.zip",
+  "source_archive": "miss-crunch-github-ready-2026-10-14-35k.zip",
   "original_source": "miss-crunch.zip uploaded 2026-10-14",
-  "production_changed": false
+  "production_changed": false,
+  "production_domain": "https://misscrunch.vercel.app/",
+  "vercel_project_name": "miss_crunch_vercel_website",
+  "vercel_project_id": "prj_44zv4ruGCozopem0gLyprs8rdvRx"
 }
