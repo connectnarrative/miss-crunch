@@ -22,3 +22,13 @@ The owner supplied a 27 MB `miss-crunch.zip`, containing the existing Next.js we
 5. Identify and compare the intended existing live website before connecting the GitHub repo to Vercel. Previous Vercel builds used direct source uploads and may differ from this recovered source.
 
 The connected GitHub write tool supports commits and text/blob writes but cannot ingest the local binary ZIP or source directory directly from this working container. No production alias has been changed.
+
+## October 14 pricing correction and domain
+
+- **Hallacas:** 70,000 COP per 10-pack.
+- **Empanadas Árabes:** **35,000 COP** per package (physical count still needs confirmation).
+- **Pasteles:** 85,000 COP per 10-pack (unchanged).
+- **Canonical production URL:** https://misscrunch.vercel.app/ (no hyphen).
+- **Exact existing Vercel project:** `miss_crunch_vercel_website` / `prj_44zv4ruGCozopem0gLyprs8rdvRx`.
+- **Complete updated source prepared:** `miss-crunch-github-ready-2026-10-14-35k.zip`, including `scripts/push-to-github.sh` to import the full files after extracting on the owner's computer.
+- **GitHub repo is not yet deployable** until the complete extracted source is pushed. Do not link a partial repository to production.
