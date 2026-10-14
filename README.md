@@ -1,27 +1,24 @@
-# Miss Crunch — GitHub source migration
+# Miss Crunch — website source migration
 
-**Status:** Migration staging only. The original running Miss Crunch website source has **not** been imported yet. This repository must **not** be connected to the public Vercel production domain until a complete source tree and successful build are verified.
+The owner supplied a 27 MB `miss-crunch.zip`, containing the existing Next.js website. It has now been recovered and updated locally with Hallacas and Empanadas Árabes in the main Shop and Saturdays section, both at **70,000 COP**.
 
-## Why this repository exists
-Move the existing Miss Crunch site under version control so future Shop, Saturday Specials, Cocina, delivery and ordering updates can deploy safely without rebuilding the website.
+**GitHub status:** The updated complete source export `miss-crunch-github-ready-2026-10-14.zip` was successfully created in ChatGPT on October 14, 2026. **The full 124-file source tree has not yet been pushed to this repository**. The current repository contains only migration records, not a deployable site. Do not connect this repository to the existing production Vercel project before the complete tree is imported and its build is verified.
 
-The GitHub repository was newly created and empty on 14 October 2026. The inspected Vercel project `miss-crunch` uses a source-upload (`drop`) deployment rather than a connected Git repository. Its source-file API truncates larger files, so the available connector response **does not supply a complete recoverable codebase**. A separate Vercel project serves `misscrunch.vercel.app` and requires authorization to read/reconnect. The uploaded screenshots and product assets do not substitute for full source code.
+## Verified recovered-source facts
 
-## Approved Shop changes (pending source import)
-- Show Hallacas on the main Shop page at **70,000 COP**, while keeping the existing Saturdays entry.
-- Show Empanadas Árabes on the main Shop page at **70,000 COP**, while keeping the existing Saturdays entry.
-- Reuse both Saturday product identities, stock IDs, pack sizes and preparation information: **do not create duplicate inventory or invent quantities**.
-- Use the seven user-supplied real Empanadas Árabes photos; five optimized WebP selections are prepared in the attached transfer kit. Do not substitute AI photography.
-- Make sure search/categories, add-to-cart totals and WhatsApp handoff use the Shop price and current unit quantity.
-- Preserve the established Miss Crunch design, Cocina, delivery calculations, existing routes and ordering flows.
+- Original Saturday Hallacas are **10 units per package**.
+- Arabic-style empanada package quantity has **not been verified**; display only “per package” until confirmed.
+- Pasteles remain **85,000 COP**; their price was not changed.
+- Main Shop and Saturday price data reference the same `saturdayPrices` constants in the prepared source.
+- Five real user-provided Empanadas Árabes photographs are included.
+- The restored source also retains Cocina, cart, delivery calculations and original photography/video.
 
-The implementation manifest is in [migration/catalogue-additions.json](migration/catalogue-additions.json). It is **not an importable source-code patch**; adapt only after reviewing the real product TypeScript schema and Saturday listing implementation.
+## Migration instructions
 
-## Release safeguards
-1. Obtain the complete existing Miss Crunch source ZIP/export from the website builder or a complete authorized production Vercel export.
-2. Import its source, assets, package manifest and lockfile into this repo; exclude `.env*` secrets, `node_modules`, build output, private credentials and production customer information.
-3. Compare current Saturday product data to the two manifest entries, use the same SKUs and confirmed pack sizes, and integrate the five user-approved WebP images.
-4. Build and test full site, Shop cart, WhatsApp checkout, Saturdays, Cocina and responsive pages in preview.
-5. Link **the intended production site** to this GitHub repository only after the preview passes and the current domain/project is positively identified. Production should not be redirected to an incomplete project.
+1. Obtain the finished `miss-crunch-github-ready-2026-10-14.zip` from the ChatGPT conversation, unzip locally.
+2. Copy its **contents** (not the ZIP as a single file) into a clone of `connectnarrative/miss-crunch`, preserving `.git` from the clone.
+3. Commit and push to `main`. The ZIP includes `docs/GITHUB-TRANSFER.md` and `docs/SPECIALS-SHOP-RELEASE.md`.
+4. Run `npm ci && npm run build`, then preview the Shop, Saturday reservation, cart and WhatsApp handoff.
+5. Identify and compare the intended existing live website before connecting the GitHub repo to Vercel. Previous Vercel builds used direct source uploads and may differ from this recovered source.
 
-Current prepared transfer kit: `miss_crunch_shop_catalogue_update_assets.zip` (shared in the ChatGPT conversation). Photos are **not yet present in this GitHub repository**; its source ZIP must be imported before production deployment.
+The connected GitHub write tool supports commits and text/blob writes but cannot ingest the local binary ZIP or source directory directly from this working container. No production alias has been changed.
