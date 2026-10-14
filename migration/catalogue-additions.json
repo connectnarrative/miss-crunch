@@ -1,14 +1,14 @@
 {
   "version": "2026-10-14",
-  "status": "staged-not-deployed",
+  "status": "source-recovered-locally-not-yet-imported-to-github",
   "target": "existing main Shop catalogue; keep Saturday offerings",
   "items": [
     {
       "existing_saturday_product": "hallacas",
       "shop_title": "Hallacas",
       "price_cop": 70000,
-      "pack_size": "inherit existing Saturday product",
-      "sku": "inherit existing Saturday product",
+      "pack_size": "10 und (confirmed in source)",
+      "sku": "hallacas (same identifier on Shop and Saturday)",
       "photos": "reuse existing Saturday photography",
       "inventory": "same existing inventory record",
       "category": "Especiales"
@@ -17,8 +17,8 @@
       "existing_saturday_product": "empanadas-arabes",
       "shop_title": "Empanadas Árabes",
       "price_cop": 70000,
-      "pack_size": "inherit existing Saturday product",
-      "sku": "inherit existing Saturday product",
+      "pack_size": "1 package; physical count unverified",
+      "sku": "empanadas-arabes (same identifier on Shop and Saturday)",
       "photos": [
         "/assets/products/empanadas-arabes-cocidas.webp",
         "/assets/products/empanadas-arabes-empaque.webp",
@@ -28,6 +28,13 @@
       ],
       "inventory": "same existing inventory record",
       "category": "Especiales"
+    },
+    {
+      "existing_saturday_product": "pasteles",
+      "shop_title": "Not being added to Shop",
+      "price_cop": 85000,
+      "pack_size": "10 und",
+      "inventory": "Preserved Saturday product; not part of requested 70k changes"
     }
   ],
   "requirements": [
@@ -39,5 +46,8 @@
     "Preserve existing delivery fees and all other catalog prices",
     "Real product photography; no AI imagery"
   ],
-  "assets": "See miss_crunch_shop_catalogue_update_assets.zip in original ChatGPT conversation (assets not yet in this repository)"
+  "assets": "See miss_crunch_shop_catalogue_update_assets.zip in original ChatGPT conversation (assets not yet in this repository)",
+  "source_archive": "miss-crunch-github-ready-2026-10-14.zip",
+  "original_source": "miss-crunch.zip uploaded 2026-10-14",
+  "production_changed": false
 }
