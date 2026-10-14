@@ -1,0 +1,43 @@
+{
+  "version": "2026-10-14",
+  "status": "staged-not-deployed",
+  "target": "existing main Shop catalogue; keep Saturday offerings",
+  "items": [
+    {
+      "existing_saturday_product": "hallacas",
+      "shop_title": "Hallacas",
+      "price_cop": 70000,
+      "pack_size": "inherit existing Saturday product",
+      "sku": "inherit existing Saturday product",
+      "photos": "reuse existing Saturday photography",
+      "inventory": "same existing inventory record",
+      "category": "Especiales"
+    },
+    {
+      "existing_saturday_product": "empanadas-arabes",
+      "shop_title": "Empanadas Árabes",
+      "price_cop": 70000,
+      "pack_size": "inherit existing Saturday product",
+      "sku": "inherit existing Saturday product",
+      "photos": [
+        "/assets/products/empanadas-arabes-cocidas.webp",
+        "/assets/products/empanadas-arabes-empaque.webp",
+        "/assets/products/empanadas-arabes-crudas-bandeja.webp",
+        "/assets/products/empanadas-arabes-crudas-detalle.webp",
+        "/assets/products/empanadas-arabes-crudas-variedad.webp"
+      ],
+      "inventory": "same existing inventory record",
+      "category": "Especiales"
+    }
+  ],
+  "requirements": [
+    "No duplicate Saturday products or inventory",
+    "Main Shop listing and search/filter entry",
+    "70,000 COP displayed for both",
+    "Add-to-cart price and WhatsApp messages reflect correct price",
+    "Reuse current pack quantities; do not invent",
+    "Preserve existing delivery fees and all other catalog prices",
+    "Real product photography; no AI imagery"
+  ],
+  "assets": "See miss_crunch_shop_catalogue_update_assets.zip in original ChatGPT conversation (assets not yet in this repository)"
+}
